@@ -6,8 +6,8 @@ steps:
         "-t",
         "gcr.io/$PROJECT_ID/cicd-basic:latest",
         "-f",
-        "Dockerfile",  # Using relative path to Dockerfile
-        "."  # Current directory as build context
+        "chapter-11 (cicd)/code/cicd_basic/Dockerfile", # Path to the Dockerfile
+        "chapter-11 (cicd)/code/cicd_basic", # Build context
       ]
 
   - name: "gcr.io/$PROJECT_ID/cicd-basic:latest"
@@ -20,4 +20,4 @@ steps:
     args: ["push", "gcr.io/$PROJECT_ID/cicd-basic:latest"]
 
 options:
-  logging: CLOUD_LOGGING_ONLY  # or specify a logs bucket as needed
+  logging: CLOUD_LOGGING_ONLY # or specify a logs bucket as needed
