@@ -13,6 +13,8 @@ steps:
   - name: "gcr.io/$PROJECT_ID/cicd-basic:latest"
     id: Validation Test
     entrypoint: python
+    env:
+      - PYTHONPATH=chapter-11 (cicd)/code/cicd_basic
     args: ["-m", "unittest", "chapter-11 (cicd)/code/cicd_basic/tests/test_calculate.py"]
 
   - name: gcr.io/cloud-builders/docker
