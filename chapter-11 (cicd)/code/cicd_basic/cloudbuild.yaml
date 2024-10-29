@@ -13,7 +13,7 @@ steps:
   - name: "gcr.io/$PROJECT_ID/cicd-basic:latest"
     id: Validation Test
     entrypoint: python
-    args: ["-m", "unittest", "tests/test_calculate.py"]
+    args: ["-m", "unittest", "chapter-11 (cicd)/code/cicd_basic/tests/test_calculate.py"]
 
   - name: gcr.io/cloud-builders/docker
     id: Push Image to GCR
